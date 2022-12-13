@@ -51,7 +51,7 @@ create table products
     price             decimal(8, 2) not null,
     create_at         timestamp     not null default CURRENT_TIMESTAMP,
     update_at         timestamp     not null default CURRENT_TIMESTAMP,
-    constraint fk_catagory_id foreign key (category_id) references categories
+    constraint fk_category_id foreign key (category_id) references categories
 );
 
 comment on table products is 'Товары магазина';
