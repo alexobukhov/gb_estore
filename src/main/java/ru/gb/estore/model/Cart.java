@@ -10,7 +10,7 @@ public class Cart {
 
     @Id
     @Column(name = "id")
-    private long id;
+    private Long id;
 
     @OneToOne
     @JoinColumn(name = "order_id")

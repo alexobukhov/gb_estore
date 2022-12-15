@@ -7,6 +7,8 @@ import ru.gb.estore.model.Order;
 import ru.gb.estore.repository.CartRepository;
 import ru.gb.estore.repository.OrderRepository;
 
+import java.util.List;
+
 @Service
 public class CartCervice {
 
@@ -21,10 +23,15 @@ public class CartCervice {
     public Cart addCart(Order order) {
         Cart cart = new Cart();
         cart.setOrderId(order);
+        cartRepository.save(cart);
         return cart;
     }
 
     public Cart getCart(long id) {
         return cartRepository.findById(id).orElse(null);
+    }
+
+    public List<Cart> getCarts() {
+        return cartRepository.findAll();
     }
 }
