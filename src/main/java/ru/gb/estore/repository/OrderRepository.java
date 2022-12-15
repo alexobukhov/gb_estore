@@ -5,6 +5,6 @@ import ru.gb.estore.model.Order;
 
 import java.util.Optional;
 
-public interface OrderRepository extends JpaRepository<Long, Order> {
+public interface OrderRepository extends JpaRepository<Order, Long> {
     Optional<Order> findById(long id);
 }

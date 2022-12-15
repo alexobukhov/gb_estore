@@ -5,7 +5,7 @@ import ru.gb.estore.model.Cart;
 
 import java.util.Optional;
 
-public interface CartRepository extends JpaRepository<Long, Cart> {
+public interface CartRepository extends JpaRepository<Cart, Long> {
 
     public Optional<Cart> findById(long id);
 }
